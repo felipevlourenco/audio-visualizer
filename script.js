@@ -54,10 +54,10 @@ function drawVisualizer() {
   canvasContext.clearRect(0, 0, width, height)
 
   dataArray.forEach((item, index) => {
-    const y = item / 255 * height / 2
+    const y = item / 255 * height
     const x = barWidth * index
 
-    canvasContext.fillStyle = `hsl(${y / height * 400}, 100%, 50%)`
+    canvasContext.fillStyle = `hsl(${y / height * 200}, 100%, 50%)`
     canvasContext.fillRect(x, height - y, barWidth, y)
 
   })
