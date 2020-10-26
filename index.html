@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Visualizer</title>
+</head>
+<style>
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto min-content;
+    justify-content: center;
+    justify-items: end;
+    align-items: center;
+  }
+</style>
+<script src="./script.js" defer></script>
+<body>
+  <div class="grid">
+    <label>Volume</label>
+    <input id="volume" type="range" value=".5" min="0" max="1" step=".01">
+  </div>
+  <canvas id="visualizer"></canvas>
+</body>
+</html>
